@@ -1,0 +1,18 @@
+type Car {
+    id: ID!
+    title: String!
+    brand: String!
+    price: Float!
+    age: Int!
+}
+
+type Query {
+    cars: [Car!]!
+    car(id: ID): Car
+}
+
+type Mutation {
+    addCar(title: String!, brand: String!, price: Float!, age: Int!): Car
+    updateCar(id: ID!, title: String!, brand: String!, price: Float!, age: Int!): Car
+    deleteCar(id: ID!): Car
+}
